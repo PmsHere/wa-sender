@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WhatsApp Campaign Manager</h1>
+    </header>
+    
+    <div class="input-section">
+      <h3>Import Numbers</h3>
+      <textarea id="numbersInput" placeholder="Enter phone numbers (comma-separated or line-by-line)"></textarea>
+    </div>
+    
+    <div class="input-section">
+      <h3>Message</h3>
+      <textarea id="messageInput" placeholder="Type your message here"></textarea>
+    </div>
+    
+    <div class="settings">
+      <h3>Settings</h3>
+      <label for="delayInput">Delay between messages (seconds):</label>
+      <input type="number" id="delayInput" min="1" value="30">
+    </div>
+    
+    <div class="controls">
+      <button id="startBtn" class="btn-primary">Start Campaign</button>
+      <button id="stopBtn" class="btn-secondary" disabled>Stop Campaign</button>
+    </div>
+    
+    <div class="status">
+      <h3>Campaign Status</h3>
+      <div id="statusText">Ready to start</div>
+      <div id="progressText">0/0 contacts processed</div>
+      <div id="currentContact">Current: None</div>
+    </div>
+    
+    <div class="reports">
+      <h3>Delivery Reports</h3>
+      <div id="reportSummary">Success: 0, Failed: 0</div>
+      <button id="downloadBtn" class="btn-secondary" disabled>Download CSV Report</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
